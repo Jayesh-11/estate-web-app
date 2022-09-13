@@ -4,10 +4,15 @@ import { sample_data } from "../constants/MOCK_DATA";
 
 function Searched() {
   const [data, setData] = useState(sample_data);
+  const [defaultData, setDefaultData] = useState(sample_data);
   const [price, setPrice] = useState("Price");
   const [area, setArea] = useState("Area");
   const [location, setLocation] = useState("Location");
-  const [type, useType] = useState("Type");
+  const [type, setType] = useState("Type:none");
+  const [displayTypeList, setDisplayTypeList] = useState(false);
+  // const [typeListData, setListData] = useState(null);
+  const listData = [...new Set(defaultData.map((item) => item.house_type))];
+
   const priceHandler = () => {
     if (price === "" || price === "High to low") {
       const ascSort = data.sort((a, b) => {
@@ -23,6 +28,7 @@ function Searched() {
       setData(desSort);
     }
   };
+
   const areaHandler = () => {
     if (area === "" || area === "High to low") {
       const ascSort = data.sort((a, b) => {
@@ -38,17 +44,48 @@ function Searched() {
       setData(desSort);
     }
   };
-  const typeHandler = () => {};
+
+  const typeHandler = () => {
+    const typeData = defaultData.filter((item) => {
+      console.log(item.house_type, type);
+      return item.house_type === type;
+    });
+    console.log(typeData);
+    setData(typeData);
+  };
+
   const locationHandler = () => {};
+
+  const displayList = () => {
+    setDisplayTypeList(!displayTypeList);
+  };
   return (
     <PrimaryDiv>
       <FilterSection>
-        <PriceButton onClick={priceHandler}>{price}</PriceButton>
-        <button>{type}⬇️</button>
+        <FilterButton onClick={priceHandler}>{price}</FilterButton>
+        <Div1>
+          <FilterButton onClick={displayList}>{type}⬇️</FilterButton>
+          {displayTypeList ? (
+            <ListDiv>
+              {listData.map((item) => {
+                return (
+                  <ListButton
+                    onClick={() => {
+                      setType(item);
+                      typeHandler();
+                    }}
+                  >
+                    {item}
+                  </ListButton>
+                );
+              })}
+            </ListDiv>
+          ) : null}
+        </Div1>
         {/* drop down menu*/}
-        <button>{location}</button>
+        <FilterButton>{location}</FilterButton>
         {/*search*/}
-        <button onClick={areaHandler}>{area}</button>
+        <FilterButton onClick={areaHandler}>{area}</FilterButton>
       </FilterSection>
       <SearchResults>
         {data.map((item) => {
@@ -76,12 +113,13 @@ const PrimaryDiv = styled.div`
 const FilterSection = styled.div`
   background-color: #9940dd;
   width: 100vw;
-  height: 10vh;
+  height: 5vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+
+  gap: 2vw;
 `;
 const SearchResults = styled.div`
   width: 100%;
@@ -117,5 +155,33 @@ const CardData = styled.div`
   margin: 0;
 `;
 
-const PriceButton = styled.button``;
+const Div1 = styled.div`
+  width: 10vw;
+  height: 100%;
+`;
+
+const ListDiv = styled.div`
+  height: 20vh;
+  width: 10vw;
+  word-wrap: normal;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+`;
+const FilterButton = styled.button`
+  padding: 5px;
+  border: none;
+  outline: none;
+  width: 10vw;
+  height: 100%;
+`;
+
+const ListButton = styled.button`
+  width: 100%;
+`;
 export default Searched;
