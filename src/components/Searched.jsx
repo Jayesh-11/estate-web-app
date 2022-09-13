@@ -4,14 +4,12 @@ import { sample_data } from "../constants/MOCK_DATA";
 
 function Searched() {
   const [data, setData] = useState(sample_data);
-  const [defaultData, setDefaultData] = useState(sample_data);
   const [price, setPrice] = useState("Price");
   const [area, setArea] = useState("Area");
-  const [location, setLocation] = useState("Location");
-  const [type, setType] = useState("Type:none");
+  const [location, setLocation] = useState("");
+  const [type, setType] = useState("Type");
   const [displayTypeList, setDisplayTypeList] = useState(false);
-  // const [typeListData, setListData] = useState(null);
-  const listData = [...new Set(defaultData.map((item) => item.house_type))];
+  const listData = [...new Set(sample_data.map((item) => item.house_type))];
 
   const priceHandler = () => {
     if (price === "" || price === "High to low") {
@@ -46,19 +44,33 @@ function Searched() {
   };
 
   const typeHandler = () => {
-    const typeData = defaultData.filter((item) => {
-      console.log(item.house_type, type);
+    const typeData = sample_data.filter((item) => {
+      // console.log(item.house_type, type);
       return item.house_type === type;
     });
     console.log(typeData);
     setData(typeData);
   };
 
-  const locationHandler = () => {};
+  const locationHandler = () => {
+    const locationData = sample_data.filter((item) => {
+      const locationNameDB = item.location.toLowerCase();
+      return locationNameDB.includes(location) === true;
+    });
+    setData(locationData);
+  };
 
   const displayList = () => {
     setDisplayTypeList(!displayTypeList);
   };
+
+  const resetHandler = () => {
+    setData(sample_data);
+    setType("Type");
+    setPrice("Price");
+    setArea("Area");
+  };
+
   return (
     <PrimaryDiv>
       <FilterSection>
@@ -66,7 +78,7 @@ function Searched() {
         <Div1>
           <FilterButton onClick={displayList}>{type}⬇️</FilterButton>
           {displayTypeList ? (
-            <ListDiv>
+            <TypeListDiv>
               {listData.map((item) => {
                 return (
                   <ListButton
@@ -79,13 +91,22 @@ function Searched() {
                   </ListButton>
                 );
               })}
-            </ListDiv>
+            </TypeListDiv>
           ) : null}
         </Div1>
         {/* drop down menu*/}
-        <FilterButton>{location}</FilterButton>
+        <LocationInput
+          type="text"
+          placeholder="Eg- New York"
+          value={location}
+          onChange={(e) => {
+            setLocation(e.target.value);
+            locationHandler();
+          }}
+        ></LocationInput>
         {/*search*/}
         <FilterButton onClick={areaHandler}>{area}</FilterButton>
+        <FilterButton onClick={resetHandler}>Reset</FilterButton>
       </FilterSection>
       <SearchResults>
         {data.map((item) => {
@@ -94,7 +115,7 @@ function Searched() {
               <CardImage src="/" alt="none"></CardImage>
               <CardData>house name - {item.house_name}</CardData>
               <CardData>cost - {item.rent_cost}</CardData>
-              <CardData>area - {item.area}</CardData>
+              <CardData>location - {item.location}</CardData>
             </Card>
           );
         })}
@@ -119,7 +140,7 @@ const FilterSection = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  gap: 2vw;
+  gap: 6vw;
 `;
 const SearchResults = styled.div`
   width: 100%;
@@ -160,7 +181,7 @@ const Div1 = styled.div`
   height: 100%;
 `;
 
-const ListDiv = styled.div`
+const TypeListDiv = styled.div`
   height: 20vh;
   width: 10vw;
   word-wrap: normal;
@@ -179,9 +200,12 @@ const FilterButton = styled.button`
   outline: none;
   width: 10vw;
   height: 100%;
+  font-size: 0.6rem;
 `;
 
 const ListButton = styled.button`
   width: 100%;
 `;
+
+const LocationInput = styled.input``;
 export default Searched;
