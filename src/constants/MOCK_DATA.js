@@ -9,7 +9,7 @@ export const sample_data = [
     buy_cost: 6662976,
     area: 2100,
     score: 2.8,
-    image: "http://dummyimage.com/106x100.png/dddddd/000000",
+    image: require("./images/1.jpg"),
     location: "Ohio",
   },
   {
@@ -22,7 +22,7 @@ export const sample_data = [
     buy_cost: 2584407,
     area: 1530,
     score: 3.3,
-    image: "http://dummyimage.com/195x100.png/dddddd/000000",
+    image: require("./images/2.jpg"),
     location: "Wisconsin",
   },
   {
@@ -35,7 +35,7 @@ export const sample_data = [
     buy_cost: 1948630,
     area: 2498,
     score: 3.1,
-    image: "http://dummyimage.com/120x100.png/cc0000/ffffff",
+    image: require("./images/3.jpg"),
     location: "Arizona",
   },
   {
@@ -48,7 +48,7 @@ export const sample_data = [
     buy_cost: 3018850,
     area: 1964,
     score: 2.6,
-    image: "http://dummyimage.com/178x100.png/cc0000/ffffff",
+    image: require("./images/4.jpg"),
     location: "Virginia",
   },
   {
@@ -61,7 +61,7 @@ export const sample_data = [
     buy_cost: 9982414,
     area: 1653,
     score: 3.4,
-    image: "http://dummyimage.com/129x100.png/cc0000/ffffff",
+    image: require("./images/5.jpg"),
     location: "Florida",
   },
   {
@@ -74,7 +74,7 @@ export const sample_data = [
     buy_cost: 3602189,
     area: 548,
     score: 4.2,
-    image: "http://dummyimage.com/127x100.png/ff4444/ffffff",
+    image: require("./images/6.jpg"),
     location: "Ohio",
   },
   {
@@ -87,7 +87,7 @@ export const sample_data = [
     buy_cost: 3111344,
     area: 2781,
     score: 3.1,
-    image: "http://dummyimage.com/184x100.png/ff4444/ffffff",
+    image: require("./images/7.jpg"),
     location: "Texas",
   },
   {
@@ -100,7 +100,7 @@ export const sample_data = [
     buy_cost: 3860143,
     area: 2489,
     score: 1.4,
-    image: "http://dummyimage.com/107x100.png/5fa2dd/ffffff",
+    image: require("./images/8.jpg"),
     location: "California",
   },
   {
@@ -113,7 +113,7 @@ export const sample_data = [
     buy_cost: 7348136,
     area: 832,
     score: 3.4,
-    image: "http://dummyimage.com/222x100.png/dddddd/000000",
+    image: require("./images/9.jpg"),
     location: "Minnesota",
   },
   {
@@ -126,7 +126,7 @@ export const sample_data = [
     buy_cost: 648471,
     area: 2799,
     score: 1.7,
-    image: "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+    image: require("./images/10.jpg"),
     location: "California",
   },
   {
@@ -139,7 +139,7 @@ export const sample_data = [
     buy_cost: 8289875,
     area: 2455,
     score: 3.8,
-    image: "http://dummyimage.com/240x100.png/dddddd/000000",
+    image: require("./images/11.jpg"),
     location: "Illinois",
   },
   {
@@ -152,7 +152,7 @@ export const sample_data = [
     buy_cost: 5060358,
     area: 832,
     score: 3.5,
-    image: "http://dummyimage.com/121x100.png/cc0000/ffffff",
+    image: require("./images/12.jpg"),
     location: "Wisconsin",
   },
   {
@@ -165,7 +165,7 @@ export const sample_data = [
     buy_cost: 7787117,
     area: 1702,
     score: 1.9,
-    image: "http://dummyimage.com/210x100.png/5fa2dd/ffffff",
+    image: require("./images/13.jpg"),
     location: "California",
   },
   {
@@ -178,7 +178,7 @@ export const sample_data = [
     buy_cost: 477888,
     area: 786,
     score: 2.2,
-    image: "http://dummyimage.com/196x100.png/dddddd/000000",
+    image: require("./images/14.jpg"),
     location: "New Jersey",
   },
   {
@@ -191,7 +191,7 @@ export const sample_data = [
     buy_cost: 6072368,
     area: 1208,
     score: 3.7,
-    image: "http://dummyimage.com/154x100.png/5fa2dd/ffffff",
+    image: require("./images/15.jpg"),
     location: "California",
   },
   {
@@ -204,7 +204,7 @@ export const sample_data = [
     buy_cost: 2305085,
     area: 1865,
     score: 2.3,
-    image: "http://dummyimage.com/198x100.png/ff4444/ffffff",
+    image: require("./images/16.jpg"),
     location: "Pennsylvania",
   },
   {
@@ -217,7 +217,7 @@ export const sample_data = [
     buy_cost: 4729845,
     area: 1479,
     score: 1.8,
-    image: "http://dummyimage.com/244x100.png/5fa2dd/ffffff",
+    image: require("./images/17.jpg"),
     location: "Mississippi",
   },
   {
@@ -230,7 +230,7 @@ export const sample_data = [
     buy_cost: 8101358,
     area: 2608,
     score: 3.0,
-    image: "http://dummyimage.com/187x100.png/dddddd/000000",
+    image: require("./images/18.jpg"),
     location: "California",
   },
   {
@@ -243,7 +243,7 @@ export const sample_data = [
     buy_cost: 6521235,
     area: 890,
     score: 3.9,
-    image: "http://dummyimage.com/164x100.png/5fa2dd/ffffff",
+    image: require("./images/19.jpg"),
     location: "Arizona",
   },
   {
@@ -256,7 +256,7 @@ export const sample_data = [
     buy_cost: 4440983,
     area: 2417,
     score: 3.1,
-    image: "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+    image: require("./images/20.jpg"),
     location: "Illinois",
   },
   {
@@ -269,7 +269,7 @@ export const sample_data = [
     buy_cost: 8887280,
     area: 598,
     score: 4.1,
-    image: "http://dummyimage.com/131x100.png/5fa2dd/ffffff",
+    image: require("./images/21.jpg"),
     location: "California",
   },
   {
@@ -282,7 +282,7 @@ export const sample_data = [
     buy_cost: 898728,
     area: 1652,
     score: 3.5,
-    image: "http://dummyimage.com/189x100.png/ff4444/ffffff",
+    image: require("./images/22.jpg"),
     location: "Illinois",
   },
   {
@@ -295,7 +295,7 @@ export const sample_data = [
     buy_cost: 8556466,
     area: 1025,
     score: 3.0,
-    image: "http://dummyimage.com/104x100.png/5fa2dd/ffffff",
+    image: require("./images/23.jpg"),
     location: "Indiana",
   },
   {
@@ -308,7 +308,7 @@ export const sample_data = [
     buy_cost: 919831,
     area: 905,
     score: 2.5,
-    image: "http://dummyimage.com/206x100.png/cc0000/ffffff",
+    image: require("./images/24.jpg"),
     location: "Pennsylvania",
   },
   {
@@ -321,7 +321,7 @@ export const sample_data = [
     buy_cost: 4451748,
     area: 1592,
     score: 1.5,
-    image: "http://dummyimage.com/219x100.png/ff4444/ffffff",
+    image: require("./images/25.jpg"),
     location: "New York",
   },
   {
@@ -334,7 +334,7 @@ export const sample_data = [
     buy_cost: 5354747,
     area: 1223,
     score: 3.2,
-    image: "http://dummyimage.com/100x100.png/5fa2dd/ffffff",
+    image: require("./images/1.jpg"),
     location: "Utah",
   },
   {
@@ -347,7 +347,7 @@ export const sample_data = [
     buy_cost: 6685994,
     area: 2056,
     score: 4.5,
-    image: "http://dummyimage.com/159x100.png/ff4444/ffffff",
+    image: require("./images/2.jpg"),
     location: "Ohio",
   },
   {
@@ -360,7 +360,7 @@ export const sample_data = [
     buy_cost: 6334512,
     area: 2808,
     score: 3.7,
-    image: "http://dummyimage.com/145x100.png/5fa2dd/ffffff",
+    image: require("./images/3.jpg"),
     location: "Utah",
   },
   {
@@ -373,7 +373,7 @@ export const sample_data = [
     buy_cost: 803426,
     area: 895,
     score: 1.5,
-    image: "http://dummyimage.com/219x100.png/dddddd/000000",
+    image: require("./images/4.jpg"),
     location: "Minnesota",
   },
   {
@@ -386,7 +386,7 @@ export const sample_data = [
     buy_cost: 3024815,
     area: 631,
     score: 1.3,
-    image: "http://dummyimage.com/163x100.png/dddddd/000000",
+    image: require("./images/5.jpg"),
     location: "North Carolina",
   },
   {
@@ -399,7 +399,7 @@ export const sample_data = [
     buy_cost: 5518804,
     area: 2552,
     score: 1.3,
-    image: "http://dummyimage.com/116x100.png/cc0000/ffffff",
+    image: require("./images/6.jpg"),
     location: "Georgia",
   },
   {
@@ -412,7 +412,7 @@ export const sample_data = [
     buy_cost: 1077822,
     area: 2473,
     score: 4.5,
-    image: "http://dummyimage.com/100x100.png/5fa2dd/ffffff",
+    image: require("./images/7.jpg"),
     location: "North Carolina",
   },
   {
@@ -425,7 +425,7 @@ export const sample_data = [
     buy_cost: 338507,
     area: 2889,
     score: 3.0,
-    image: "http://dummyimage.com/118x100.png/cc0000/ffffff",
+    image: require("./images/8.jpg"),
     location: "Washington",
   },
   {
@@ -438,7 +438,7 @@ export const sample_data = [
     buy_cost: 7044328,
     area: 865,
     score: 2.3,
-    image: "http://dummyimage.com/184x100.png/cc0000/ffffff",
+    image: require("./images/9.jpg"),
     location: "Oklahoma",
   },
   {
@@ -451,7 +451,7 @@ export const sample_data = [
     buy_cost: 6760391,
     area: 790,
     score: 4.5,
-    image: "http://dummyimage.com/131x100.png/dddddd/000000",
+    image: require("./images/10.jpg"),
     location: "District of Columbia",
   },
   {
@@ -464,7 +464,7 @@ export const sample_data = [
     buy_cost: 9579831,
     area: 2310,
     score: 1.2,
-    image: "http://dummyimage.com/179x100.png/ff4444/ffffff",
+    image: require("./images/11.jpg"),
     location: "Washington",
   },
   {
@@ -477,7 +477,7 @@ export const sample_data = [
     buy_cost: 1884647,
     area: 2004,
     score: 3.0,
-    image: "http://dummyimage.com/182x100.png/cc0000/ffffff",
+    image: require("./images/12.jpg"),
     location: "Louisiana",
   },
   {
@@ -490,7 +490,7 @@ export const sample_data = [
     buy_cost: 6046321,
     area: 764,
     score: 2.5,
-    image: "http://dummyimage.com/119x100.png/ff4444/ffffff",
+    image: require("./images/13.jpg"),
     location: "California",
   },
   {
@@ -503,7 +503,7 @@ export const sample_data = [
     buy_cost: 6345603,
     area: 2996,
     score: 1.1,
-    image: "http://dummyimage.com/129x100.png/dddddd/000000",
+    image: require("./images/14.jpg"),
     location: "New Jersey",
   },
   {
@@ -516,7 +516,7 @@ export const sample_data = [
     buy_cost: 1400624,
     area: 2069,
     score: 4.9,
-    image: "http://dummyimage.com/242x100.png/5fa2dd/ffffff",
+    image: require("./images/15.jpg"),
     location: "Georgia",
   },
   {
@@ -529,7 +529,7 @@ export const sample_data = [
     buy_cost: 7289747,
     area: 2436,
     score: 1.0,
-    image: "http://dummyimage.com/170x100.png/dddddd/000000",
+    image: require("./images/15.jpg"),
     location: "Alabama",
   },
   {
@@ -542,7 +542,7 @@ export const sample_data = [
     buy_cost: 2740387,
     area: 730,
     score: 2.9,
-    image: "http://dummyimage.com/200x100.png/dddddd/000000",
+    image: require("./images/16.jpg"),
     location: "Oregon",
   },
   {
@@ -555,7 +555,7 @@ export const sample_data = [
     buy_cost: 1903204,
     area: 1395,
     score: 4.2,
-    image: "http://dummyimage.com/195x100.png/cc0000/ffffff",
+    image: require("./images/17.jpg"),
     location: "Kentucky",
   },
   {
@@ -568,7 +568,7 @@ export const sample_data = [
     buy_cost: 3341306,
     area: 2761,
     score: 1.3,
-    image: "http://dummyimage.com/217x100.png/5fa2dd/ffffff",
+    image: require("./images/18.jpg"),
     location: "Michigan",
   },
   {
@@ -581,7 +581,7 @@ export const sample_data = [
     buy_cost: 6720439,
     area: 1159,
     score: 2.6,
-    image: "http://dummyimage.com/148x100.png/ff4444/ffffff",
+    image: require("./images/19.jpg"),
     location: "Indiana",
   },
   {
@@ -594,7 +594,7 @@ export const sample_data = [
     buy_cost: 1989498,
     area: 695,
     score: 4.5,
-    image: "http://dummyimage.com/180x100.png/cc0000/ffffff",
+    image: require("./images/20.jpg"),
     location: "New York",
   },
   {
@@ -607,7 +607,7 @@ export const sample_data = [
     buy_cost: 8165010,
     area: 2862,
     score: 1.8,
-    image: "http://dummyimage.com/197x100.png/cc0000/ffffff",
+    image: require("./images/21.jpg"),
     location: "Virginia",
   },
   {
@@ -620,7 +620,7 @@ export const sample_data = [
     buy_cost: 3891292,
     area: 2569,
     score: 3.8,
-    image: "http://dummyimage.com/232x100.png/dddddd/000000",
+    image: require("./images/22.jpg"),
     location: "Massachusetts",
   },
   {
@@ -633,7 +633,7 @@ export const sample_data = [
     buy_cost: 687180,
     area: 2245,
     score: 1.1,
-    image: "http://dummyimage.com/106x100.png/cc0000/ffffff",
+    image: require("./images/23.jpg"),
     location: "Florida",
   },
   {
@@ -646,7 +646,7 @@ export const sample_data = [
     buy_cost: 3156603,
     area: 1146,
     score: 2.1,
-    image: "http://dummyimage.com/153x100.png/cc0000/ffffff",
+    image: require("./images/24.jpg"),
     location: "New York",
   },
   {
@@ -659,7 +659,7 @@ export const sample_data = [
     buy_cost: 7138917,
     area: 534,
     score: 4.0,
-    image: "http://dummyimage.com/168x100.png/dddddd/000000",
+    image: require("./images/25.jpg"),
     location: "California",
   },
   {
@@ -672,7 +672,7 @@ export const sample_data = [
     buy_cost: 4168064,
     area: 2828,
     score: 1.9,
-    image: "http://dummyimage.com/132x100.png/5fa2dd/ffffff",
+    image: require("./images/1.jpg"),
     location: "Texas",
   },
   {
@@ -685,7 +685,7 @@ export const sample_data = [
     buy_cost: 4314047,
     area: 2193,
     score: 3.5,
-    image: "http://dummyimage.com/126x100.png/5fa2dd/ffffff",
+    image: require("./images/2.jpg"),
     location: "West Virginia",
   },
   {
@@ -698,7 +698,7 @@ export const sample_data = [
     buy_cost: 5566817,
     area: 1436,
     score: 3.6,
-    image: "http://dummyimage.com/225x100.png/dddddd/000000",
+    image: require("./images/3.jpg"),
     location: "New York",
   },
   {
@@ -711,7 +711,7 @@ export const sample_data = [
     buy_cost: 550585,
     area: 2516,
     score: 4.1,
-    image: "http://dummyimage.com/159x100.png/cc0000/ffffff",
+    image: require("./images/4.jpg"),
     location: "New York",
   },
   {
@@ -724,7 +724,7 @@ export const sample_data = [
     buy_cost: 5069627,
     area: 2114,
     score: 4.4,
-    image: "http://dummyimage.com/250x100.png/dddddd/000000",
+    image: require("./images/5.jpg"),
     location: "Michigan",
   },
   {
@@ -737,7 +737,7 @@ export const sample_data = [
     buy_cost: 7157136,
     area: 962,
     score: 1.3,
-    image: "http://dummyimage.com/186x100.png/ff4444/ffffff",
+    image: require("./images/6.jpg"),
     location: "New York",
   },
   {
@@ -750,7 +750,7 @@ export const sample_data = [
     buy_cost: 9676660,
     area: 2807,
     score: 2.8,
-    image: "http://dummyimage.com/197x100.png/cc0000/ffffff",
+    image: require("./images/7.jpg"),
     location: "Texas",
   },
   {
@@ -763,7 +763,7 @@ export const sample_data = [
     buy_cost: 301466,
     area: 1313,
     score: 4.7,
-    image: "http://dummyimage.com/242x100.png/cc0000/ffffff",
+    image: require("./images/8.jpg"),
     location: "Florida",
   },
   {
@@ -776,7 +776,7 @@ export const sample_data = [
     buy_cost: 2044052,
     area: 846,
     score: 2.7,
-    image: "http://dummyimage.com/139x100.png/ff4444/ffffff",
+    image: require("./images/9.jpg"),
     location: "Illinois",
   },
   {
@@ -789,7 +789,7 @@ export const sample_data = [
     buy_cost: 4728919,
     area: 1032,
     score: 3.4,
-    image: "http://dummyimage.com/173x100.png/dddddd/000000",
+    image: require("./images/10.jpg"),
     location: "Colorado",
   },
   {
@@ -802,7 +802,7 @@ export const sample_data = [
     buy_cost: 1817246,
     area: 1278,
     score: 1.1,
-    image: "http://dummyimage.com/210x100.png/cc0000/ffffff",
+    image: require("./images/11.jpg"),
     location: "Oregon",
   },
   {
@@ -815,7 +815,7 @@ export const sample_data = [
     buy_cost: 9613312,
     area: 1393,
     score: 3.4,
-    image: "http://dummyimage.com/167x100.png/ff4444/ffffff",
+    image: require("./images/12.jpg"),
     location: "Florida",
   },
   {
@@ -828,7 +828,7 @@ export const sample_data = [
     buy_cost: 4561872,
     area: 1699,
     score: 1.9,
-    image: "http://dummyimage.com/245x100.png/ff4444/ffffff",
+    image: require("./images/13.jpg"),
     location: "Texas",
   },
   {
@@ -841,7 +841,7 @@ export const sample_data = [
     buy_cost: 1368030,
     area: 2062,
     score: 1.8,
-    image: "http://dummyimage.com/234x100.png/cc0000/ffffff",
+    image: require("./images/14.jpg"),
     location: "Mississippi",
   },
   {
@@ -854,7 +854,7 @@ export const sample_data = [
     buy_cost: 6067776,
     area: 1165,
     score: 2.7,
-    image: "http://dummyimage.com/242x100.png/dddddd/000000",
+    image: require("./images/15.jpg"),
     location: "Nebraska",
   },
   {
@@ -867,7 +867,7 @@ export const sample_data = [
     buy_cost: 4882666,
     area: 1777,
     score: 4.2,
-    image: "http://dummyimage.com/242x100.png/5fa2dd/ffffff",
+    image: require("./images/16.jpg"),
     location: "Alabama",
   },
   {
@@ -880,7 +880,7 @@ export const sample_data = [
     buy_cost: 772618,
     area: 2177,
     score: 4.2,
-    image: "http://dummyimage.com/176x100.png/dddddd/000000",
+    image: require("./images/17.jpg"),
     location: "New Jersey",
   },
   {
@@ -893,7 +893,7 @@ export const sample_data = [
     buy_cost: 2306430,
     area: 964,
     score: 1.4,
-    image: "http://dummyimage.com/100x100.png/dddddd/000000",
+    image: require("./images/18.jpg"),
     location: "Massachusetts",
   },
   {
@@ -906,7 +906,7 @@ export const sample_data = [
     buy_cost: 5265461,
     area: 2783,
     score: 4.6,
-    image: "http://dummyimage.com/221x100.png/ff4444/ffffff",
+    image: require("./images/19.jpg"),
     location: "Texas",
   },
   {
@@ -919,7 +919,7 @@ export const sample_data = [
     buy_cost: 9729284,
     area: 1624,
     score: 4.0,
-    image: "http://dummyimage.com/207x100.png/ff4444/ffffff",
+    image: require("./images/20.jpg"),
     location: "Massachusetts",
   },
   {
@@ -932,7 +932,7 @@ export const sample_data = [
     buy_cost: 1157031,
     area: 2260,
     score: 4.7,
-    image: "http://dummyimage.com/209x100.png/5fa2dd/ffffff",
+    image: require("./images/21.jpg"),
     location: "New York",
   },
   {
@@ -945,7 +945,7 @@ export const sample_data = [
     buy_cost: 9945080,
     area: 2807,
     score: 4.9,
-    image: "http://dummyimage.com/135x100.png/ff4444/ffffff",
+    image: require("./images/22.jpg"),
     location: "California",
   },
   {
@@ -958,7 +958,7 @@ export const sample_data = [
     buy_cost: 191508,
     area: 2373,
     score: 4.1,
-    image: "http://dummyimage.com/132x100.png/cc0000/ffffff",
+    image: require("./images/23.jpg"),
     location: "Washington",
   },
   {
@@ -971,7 +971,7 @@ export const sample_data = [
     buy_cost: 2434184,
     area: 2530,
     score: 1.9,
-    image: "http://dummyimage.com/206x100.png/dddddd/000000",
+    image: require("./images/24.jpg"),
     location: "Michigan",
   },
   {
@@ -984,7 +984,7 @@ export const sample_data = [
     buy_cost: 3866223,
     area: 1634,
     score: 4.7,
-    image: "http://dummyimage.com/156x100.png/dddddd/000000",
+    image: require("./images/25.jpg"),
     location: "Colorado",
   },
   {
@@ -997,7 +997,7 @@ export const sample_data = [
     buy_cost: 3746791,
     area: 1367,
     score: 4.9,
-    image: "http://dummyimage.com/231x100.png/ff4444/ffffff",
+    image: require("./images/1.jpg"),
     location: "Florida",
   },
   {
@@ -1010,7 +1010,7 @@ export const sample_data = [
     buy_cost: 1690159,
     area: 1487,
     score: 3.6,
-    image: "http://dummyimage.com/145x100.png/dddddd/000000",
+    image: require("./images/2.jpg"),
     location: "Iowa",
   },
   {
@@ -1023,7 +1023,7 @@ export const sample_data = [
     buy_cost: 2832605,
     area: 1006,
     score: 2.2,
-    image: "http://dummyimage.com/178x100.png/cc0000/ffffff",
+    image: require("./images/3.jpg"),
     location: "Colorado",
   },
   {
@@ -1036,7 +1036,7 @@ export const sample_data = [
     buy_cost: 3031697,
     area: 2167,
     score: 2.3,
-    image: "http://dummyimage.com/155x100.png/ff4444/ffffff",
+    image: require("./images/4.jpg"),
     location: "California",
   },
   {
@@ -1049,7 +1049,7 @@ export const sample_data = [
     buy_cost: 1728375,
     area: 2393,
     score: 3.8,
-    image: "http://dummyimage.com/206x100.png/dddddd/000000",
+    image: require("./images/5.jpg"),
     location: "Texas",
   },
   {
@@ -1062,7 +1062,7 @@ export const sample_data = [
     buy_cost: 4804718,
     area: 1368,
     score: 3.5,
-    image: "http://dummyimage.com/219x100.png/5fa2dd/ffffff",
+    image: require("./images/6.jpg"),
     location: "California",
   },
   {
@@ -1075,7 +1075,7 @@ export const sample_data = [
     buy_cost: 7477208,
     area: 2611,
     score: 1.0,
-    image: "http://dummyimage.com/196x100.png/cc0000/ffffff",
+    image: require("./images/7.jpg"),
     location: "Florida",
   },
   {
@@ -1088,7 +1088,7 @@ export const sample_data = [
     buy_cost: 4772241,
     area: 2810,
     score: 2.8,
-    image: "http://dummyimage.com/191x100.png/ff4444/ffffff",
+    image: require("./images/8.jpg"),
     location: "Missouri",
   },
   {
@@ -1101,7 +1101,7 @@ export const sample_data = [
     buy_cost: 2158692,
     area: 1854,
     score: 1.7,
-    image: "http://dummyimage.com/166x100.png/dddddd/000000",
+    image: require("./images/9.jpg"),
     location: "California",
   },
   {
@@ -1114,7 +1114,7 @@ export const sample_data = [
     buy_cost: 9958196,
     area: 2228,
     score: 2.4,
-    image: "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
+    image: require("./images/10.jpg"),
     location: "Texas",
   },
   {
@@ -1127,7 +1127,7 @@ export const sample_data = [
     buy_cost: 553216,
     area: 1907,
     score: 5.0,
-    image: "http://dummyimage.com/225x100.png/dddddd/000000",
+    image: require("./images/11.jpg"),
     location: "Mississippi",
   },
   {
@@ -1140,7 +1140,7 @@ export const sample_data = [
     buy_cost: 7974187,
     area: 2293,
     score: 1.8,
-    image: "http://dummyimage.com/194x100.png/dddddd/000000",
+    image: require("./images/12.jpg"),
     location: "Florida",
   },
   {
@@ -1153,7 +1153,7 @@ export const sample_data = [
     buy_cost: 396835,
     area: 553,
     score: 3.6,
-    image: "http://dummyimage.com/195x100.png/cc0000/ffffff",
+    image: require("./images/13.jpg"),
     location: "Georgia",
   },
   {
@@ -1166,7 +1166,7 @@ export const sample_data = [
     buy_cost: 6823663,
     area: 1442,
     score: 3.8,
-    image: "http://dummyimage.com/122x100.png/cc0000/ffffff",
+    image: require("./images/14.jpg"),
     location: "Connecticut",
   },
   {
@@ -1179,7 +1179,7 @@ export const sample_data = [
     buy_cost: 2183767,
     area: 904,
     score: 4.8,
-    image: "http://dummyimage.com/139x100.png/cc0000/ffffff",
+    image: require("./images/15.jpg"),
     location: "Virginia",
   },
   {
@@ -1192,7 +1192,7 @@ export const sample_data = [
     buy_cost: 4650868,
     area: 2702,
     score: 2.9,
-    image: "http://dummyimage.com/229x100.png/cc0000/ffffff",
+    image: require("./images/16.jpg"),
     location: "Texas",
   },
   {
@@ -1205,7 +1205,7 @@ export const sample_data = [
     buy_cost: 7322126,
     area: 1457,
     score: 1.1,
-    image: "http://dummyimage.com/177x100.png/ff4444/ffffff",
+    image: require("./images/17.jpg"),
     location: "South Carolina",
   },
   {
@@ -1218,7 +1218,7 @@ export const sample_data = [
     buy_cost: 4702020,
     area: 1558,
     score: 2.0,
-    image: "http://dummyimage.com/243x100.png/5fa2dd/ffffff",
+    image: require("./images/18.jpg"),
     location: "Texas",
   },
   {
@@ -1231,7 +1231,7 @@ export const sample_data = [
     buy_cost: 7301423,
     area: 1055,
     score: 2.5,
-    image: "http://dummyimage.com/112x100.png/5fa2dd/ffffff",
+    image: require("./images/19.jpg"),
     location: "California",
   },
   {
@@ -1244,7 +1244,7 @@ export const sample_data = [
     buy_cost: 8645893,
     area: 1955,
     score: 4.5,
-    image: "http://dummyimage.com/243x100.png/ff4444/ffffff",
+    image: require("./images/20.jpg"),
     location: "Arizona",
   },
   {
@@ -1257,7 +1257,7 @@ export const sample_data = [
     buy_cost: 9036522,
     area: 1640,
     score: 1.0,
-    image: "http://dummyimage.com/210x100.png/cc0000/ffffff",
+    image: require("./images/21.jpg"),
     location: "Alabama",
   },
   {
@@ -1270,7 +1270,7 @@ export const sample_data = [
     buy_cost: 8150415,
     area: 1051,
     score: 4.2,
-    image: "http://dummyimage.com/107x100.png/ff4444/ffffff",
+    image: require("./images/22.jpg"),
     location: "Montana",
   },
   {
@@ -1283,7 +1283,7 @@ export const sample_data = [
     buy_cost: 1883224,
     area: 2405,
     score: 4.7,
-    image: "http://dummyimage.com/169x100.png/dddddd/000000",
+    image: require("./images/23.jpg"),
     location: "Pennsylvania",
   },
   {
@@ -1296,7 +1296,7 @@ export const sample_data = [
     buy_cost: 1613019,
     area: 2175,
     score: 1.8,
-    image: "http://dummyimage.com/191x100.png/cc0000/ffffff",
+    image: require("./images/24.jpg"),
     location: "Louisiana",
   },
 ];

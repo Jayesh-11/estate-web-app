@@ -17,7 +17,7 @@ const PrimaryDiv = styled.div`
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-color: red;
+  background-color: rgba(194, 129, 238, 1);
   display: flex;
   justify-content: center;
 `;

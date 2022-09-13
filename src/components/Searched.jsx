@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { sample_data } from "../constants/MOCK_DATA";
+import { BiBath, BiBed } from "react-icons/bi";
 
 function Searched() {
   const [data, setData] = useState(sample_data);
@@ -112,10 +113,25 @@ function Searched() {
         {data.map((item) => {
           return (
             <Card key={item.id}>
-              <CardImage src="/" alt="none"></CardImage>
-              <CardData>house name - {item.house_name}</CardData>
-              <CardData>cost - {item.rent_cost}</CardData>
-              <CardData>location - {item.location}</CardData>
+              <CardImage src={item.image} alt="none"></CardImage>
+              <CardData>
+                <Span1>${item.rent_cost}</Span1>
+                <Span2>/month</Span2>{" "}
+              </CardData>
+              <CardData>
+                <Span3>{item.house_name}</Span3>
+              </CardData>
+              <CardData>{item.score} / 5</CardData>
+              <CardData>{item.location}</CardData>
+              <CardData>
+                <Span4>
+                  <BiBed /> {item.bedroom} Bedroom
+                </Span4>
+                <Span4>
+                  <BiBath />
+                  {item.bathroom} Baths
+                </Span4>
+              </CardData>
             </Card>
           );
         })}
@@ -125,26 +141,24 @@ function Searched() {
 }
 
 const PrimaryDiv = styled.div`
-  background-color: #34c634;
   width: 100vw;
   height: 90vh;
   overflow-x: hidden;
 `;
 
 const FilterSection = styled.div`
-  background-color: #9940dd;
+  background-color: transparent;
   width: 100vw;
   height: 5vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
-  gap: 6vw;
+  gap: 2vw;
 `;
 const SearchResults = styled.div`
   width: 100%;
-  background-color: #a292ae;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -152,28 +166,33 @@ const SearchResults = styled.div`
   align-items: center;
   column-gap: 5vh;
   row-gap: 2vw;
+  padding-top: 2rem;
 `;
 
 const Card = styled.div`
+  width: 40vh;
   display: flex;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
   flex-direction: column;
-  background-color: #e77c7c;
+  background-color: white;
   margin: 0;
+  border-radius: 1rem;
 `;
 
 const CardImage = styled.img`
   height: 30vh;
   width: 40vh;
-  background-color: #ac3232;
   margin: 0;
+  border-radius: 1rem;
 `;
 const CardData = styled.div`
-  height: 20vh;
-  width: 40vh;
-  background-color: #417b29;
-  margin: 0;
+  height: 5vh;
+  width: 35vh;
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
 `;
 
 const Div1 = styled.div`
@@ -193,6 +212,8 @@ const TypeListDiv = styled.div`
   flex-direction: column;
   justify-content: baseline;
   align-items: center;
+  border-radius: 0.5rem;
+  gap: 0.2rem;
 `;
 const FilterButton = styled.button`
   padding: 5px;
@@ -201,11 +222,39 @@ const FilterButton = styled.button`
   width: 10vw;
   height: 100%;
   font-size: 0.6rem;
+  border-radius: 0.5rem;
 `;
 
 const ListButton = styled.button`
   width: 100%;
+  outline: none;
+  border: none;
+  border-top: 1px;
+  border-radius: 0.2rem;
+  padding: 5px;
 `;
 
-const LocationInput = styled.input``;
+const LocationInput = styled.input`
+  width: 30vw;
+  outline: none;
+  border: none;
+  border-radius: 100rem;
+  background-color: rgb(239, 239, 239);
+`;
+
+const Span1 = styled.span`
+  font-weight: 1000;
+  font-size: 2rem;
+`;
+const Span2 = styled.span``;
+const Span3 = styled.span`
+  font-weight: 800;
+  font-size: 1.2rem;
+`;
+const Span4 = styled.span`
+  margin-right: 1vw;
+  background-color: rgba(194, 129, 238, 0.4);
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+`;
 export default Searched;
