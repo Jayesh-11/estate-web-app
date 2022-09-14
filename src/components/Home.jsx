@@ -11,7 +11,9 @@ function Home() {
     <PrimaryDiv>
       <Header>
         <Logo>
-          <BsBuilding size="2rem" />
+          <Link2 to="#searchedSection">
+            <BsBuilding size="2rem" />
+          </Link2>
           <Link2 to="#searchedSection">Premium Estate</Link2>
         </Logo>
         <NavigationSection>
@@ -85,19 +87,28 @@ const Ul = styled.ul`
   height: 100%;
   margin: 0;
   display: flex;
+  padding: 0;
   align-items: center;
+  width: 100%;
 `;
 const Li = styled.li`
   background-color: transparent;
   float: left;
   display: block;
   text-align: center;
-  padding: 16px;
+  padding-right: 8px;
   text-decoration: none;
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 0.2rem;
-  width: 4rem;
+  width: 3rem;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  :hover {
+    filter: invert();
+    transform: scale(1.1);
+    font-weight: 1000;
+  }
 `;
 
 const NavLink1 = styled(NavLink)`
@@ -123,6 +134,8 @@ const Link2 = styled(Link)`
   color: black;
   font-size: 0.8rem;
   text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
 `;
 
 export default Home;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { sample_data } from "../constants/MOCK_DATA";
 import { BiBath, BiBed } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
-import { BsBookmark } from "react-icons/bs";
+import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
 
 function Searched() {
   const [data, setData] = useState(sample_data);
@@ -119,7 +119,7 @@ function Searched() {
         </Div1>
         <LocationInput
           type="text"
-          placeholder="    Eg- New York"
+          placeholder="Eg- New York"
           value={location}
           onChange={(e) => {
             setLocation(e.target.value);
@@ -186,7 +186,7 @@ function Searched() {
                       saveHandler(item);
                     }}
                   >
-                    unsave
+                    <BsFillBookmarkFill />
                   </SaveButton>
                 </CardData>
                 <CardData>
@@ -250,6 +250,12 @@ const Card = styled.div`
   background-color: white;
   margin: 0;
   border-radius: 1rem;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.04);
+  }
 `;
 
 const CardImage = styled.img`
@@ -296,6 +302,13 @@ const FilterButton = styled.button`
   font-size: 0.6rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  :hover {
+    filter: invert();
+    transform: scale(1.1);
+    font-weight: 1000;
+  }
 `;
 
 const ListButton = styled.button`
@@ -313,6 +326,7 @@ const LocationInput = styled.input`
   border: none;
   border-radius: 100rem;
   background-color: rgb(239, 239, 239);
+  padding-left: 20px;
 `;
 
 const Span1 = styled.span`
