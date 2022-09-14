@@ -11,6 +11,8 @@ function Searched() {
   const [type, setType] = useState("Type");
   const [displayTypeList, setDisplayTypeList] = useState(false);
   const listData = [...new Set(sample_data.map((item) => item.house_type))];
+  const [savedCards, setSavedCards] = useState([]);
+  // const [currentSaved, setCurrentSaved] = useState();
 
   const priceHandler = () => {
     if (price === "" || price === "High to low") {
@@ -72,6 +74,24 @@ function Searched() {
     setArea("Area");
   };
 
+  const saveHandler = (x) => {
+    let isInSaved = false;
+    savedCards.map((item) => {
+      if (item === x) {
+        isInSaved = true;
+      }
+    });
+    if (isInSaved) {
+      setSavedCards(
+        savedCards.filter((item) => {
+          return item !== x;
+        })
+      );
+    } else {
+      setSavedCards([...savedCards, x]);
+    }
+  };
+
   return (
     <PrimaryDiv>
       <FilterSection>
@@ -102,7 +122,7 @@ function Searched() {
           value={location}
           onChange={(e) => {
             setLocation(e.target.value);
-            locationHandler();
+            locationHandler(); // isInSet = true;
           }}
         ></LocationInput>
         {/*search*/}
@@ -117,6 +137,13 @@ function Searched() {
               <CardData>
                 <Span1>${item.rent_cost}</Span1>
                 <Span2>/month</Span2>{" "}
+                <SaveButton
+                  onClick={() => {
+                    saveHandler(item.id);
+                  }}
+                >
+                  save
+                </SaveButton>
               </CardData>
               <CardData>
                 <Span3>{item.house_name}</Span3>
@@ -136,6 +163,15 @@ function Searched() {
           );
         })}
       </SearchResults>
+
+      <SavedSection>
+        <H1>Saved</H1>
+        <SavedCardsDisplay>
+          {savedCards.map((item) => {
+            return <h1>{item}</h1>;
+          })}
+        </SavedCardsDisplay>
+      </SavedSection>
     </PrimaryDiv>
   );
 }
@@ -256,5 +292,34 @@ const Span4 = styled.span`
   background-color: rgba(194, 129, 238, 0.4);
   border-radius: 0.2rem;
   padding: 0.1rem;
+`;
+const SaveButton = styled.button``;
+
+const SavedSection = styled.div`
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 5vh;
+  row-gap: 2vw;
+  padding-top: 2rem;
+`;
+
+const H1 = styled.h1``;
+
+const SavedCardsDisplay = styled.div`
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 5vh;
+  row-gap: 2vw;
+  padding-top: 2rem;
 `;
 export default Searched;

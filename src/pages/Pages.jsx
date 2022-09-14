@@ -6,6 +6,7 @@ function Pages() {
   return (
     <Routes>
       {/* <Route path="/" element={} /> */}
+      <Route path="/" element={<Searched />} />
       <Route path="/rent" element={<Searched />} />
       {/* <Route path="/Skills" element={} /> */}
       {/* <Route path="/Contact" element={} /> */}
