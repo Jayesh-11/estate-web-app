@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { sample_data } from "../constants/MOCK_DATA";
 import { BiBath, BiBed } from "react-icons/bi";
+import { AiOutlineHome } from "react-icons/ai";
+import { BsBookmark } from "react-icons/bs";
 
 function Searched() {
   const [data, setData] = useState(sample_data);
@@ -94,7 +96,7 @@ function Searched() {
 
   return (
     <PrimaryDiv>
-      <FilterSection>
+      <FilterSection id="searchedSection">
         <FilterButton onClick={priceHandler}>{price}</FilterButton>
         <Div1>
           <FilterButton onClick={displayList}>{type}⬇️</FilterButton>
@@ -115,10 +117,9 @@ function Searched() {
             </TypeListDiv>
           ) : null}
         </Div1>
-        {/* drop down menu*/}
         <LocationInput
           type="text"
-          placeholder="Eg- New York"
+          placeholder="    Eg- New York"
           value={location}
           onChange={(e) => {
             setLocation(e.target.value);
@@ -139,10 +140,10 @@ function Searched() {
                 <Span2>/month</Span2>{" "}
                 <SaveButton
                   onClick={() => {
-                    saveHandler(item.id);
+                    saveHandler(item);
                   }}
                 >
-                  save
+                  <BsBookmark />
                 </SaveButton>
               </CardData>
               <CardData>
@@ -159,16 +160,51 @@ function Searched() {
                   {item.bathroom} Baths
                 </Span4>
               </CardData>
+              <CardData>
+                <Span4>
+                  <AiOutlineHome />
+                  {item.area} Sq-feet
+                </Span4>
+              </CardData>
             </Card>
           );
         })}
       </SearchResults>
 
-      <SavedSection>
+      <SavedSection id="savedSection">
         <H1>Saved</H1>
         <SavedCardsDisplay>
           {savedCards.map((item) => {
-            return <h1>{item}</h1>;
+            return (
+              <Card key={item.id}>
+                <CardImage src={item.image} alt="none"></CardImage>
+                <CardData>
+                  <Span1>${item.rent_cost}</Span1>
+                  <Span2>/month</Span2>{" "}
+                  <SaveButton
+                    onClick={() => {
+                      saveHandler(item);
+                    }}
+                  >
+                    unsave
+                  </SaveButton>
+                </CardData>
+                <CardData>
+                  <Span3>{item.house_name}</Span3>
+                </CardData>
+                <CardData>{item.score} / 5</CardData>
+                <CardData>{item.location}</CardData>
+                <CardData>
+                  <Span4>
+                    <BiBed /> {item.bedroom} Bedroom
+                  </Span4>
+                  <Span4>
+                    <BiBath />
+                    {item.bathroom} Baths
+                  </Span4>
+                </CardData>
+              </Card>
+            );
           })}
         </SavedCardsDisplay>
       </SavedSection>
@@ -259,6 +295,7 @@ const FilterButton = styled.button`
   height: 100%;
   font-size: 0.6rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 `;
 
 const ListButton = styled.button`
@@ -293,7 +330,13 @@ const Span4 = styled.span`
   border-radius: 0.2rem;
   padding: 0.1rem;
 `;
-const SaveButton = styled.button``;
+const SaveButton = styled.button`
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 100rem;
+  cursor: pointer;
+`;
 
 const SavedSection = styled.div`
   width: 100%;

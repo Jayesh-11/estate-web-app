@@ -8,7 +8,7 @@ function Pages() {
       {/* <Route path="/" element={} /> */}
       <Route path="/" element={<Searched />} />
       <Route path="/rent" element={<Searched />} />
-      {/* <Route path="/Skills" element={} /> */}
+      {/* <Route path="/savedSection" element={<Searched />} /> */}
       {/* <Route path="/Contact" element={} /> */}
     </Routes>
   );

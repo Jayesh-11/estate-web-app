@@ -4,6 +4,7 @@ import Pages from "../pages/Pages";
 import { NavLink } from "react-router-dom";
 import { BsBuilding } from "react-icons/bs";
 import { HiOutlineUserCircle } from "react-icons/hi";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Home() {
   return (
@@ -11,14 +12,14 @@ function Home() {
       <Header>
         <Logo>
           <BsBuilding size="2rem" />
-          <H6>Premium Estate</H6>
+          <Link2 to="#searchedSection">Premium Estate</Link2>
         </Logo>
         <NavigationSection>
           <Ul>
             <Li>
-              <NavLink1 to="/rent" id="Rent">
+              <Link1 to="#searchedSection" id="Rent">
                 Rent
-              </NavLink1>
+              </Link1>
             </Li>
             <Li>
               <NavLink1 to="/rent" id="Buy">
@@ -26,9 +27,9 @@ function Home() {
               </NavLink1>
             </Li>
             <Li>
-              <NavLink1 to="/rent" id="Sell">
+              <Link1 to="#savedSection" id="saved">
                 Saved
-              </NavLink1>
+              </Link1>
             </Li>
           </Ul>
         </NavigationSection>
@@ -99,15 +100,29 @@ const Li = styled.li`
   width: 4rem;
 `;
 
-const H6 = styled.h6`
-  margin: 0;
-  margin-top: 0.2rem;
-  text-align: center;
-`;
-
 const NavLink1 = styled(NavLink)`
   text-decoration: none;
   color: black;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 0.3rem;
+`;
+
+const Link1 = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 0.3rem;
+`;
+
+const Link2 = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  text-align: center;
 `;
 
 export default Home;
