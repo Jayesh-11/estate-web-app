@@ -105,11 +105,18 @@ function Searched() {
 
   return (
     <PrimaryDiv>
+      {/* Pop up contoller start */}
+
       {popUp ? (
         <PopUpDiv>
           <H2>Done</H2>
         </PopUpDiv>
       ) : null}
+
+      {/* Pop up contoller end */}
+
+      {/* Filter Render start*/}
+
       <FilterSection id="searchedSection">
         <FilterButton onClick={priceHandler}>{price}</FilterButton>
         <Div1>
@@ -144,6 +151,10 @@ function Searched() {
           }}
         ></LocationInput>
       </FilterSection>
+
+      {/* Filter Render end*/}
+
+      {/* Search Results start */}
       <SearchResults>
         {data.map((item) => {
           return (
@@ -187,6 +198,10 @@ function Searched() {
           );
         })}
       </SearchResults>
+
+      {/* Search Results end */}
+
+      {/* Saved Section Start */}
 
       <SavedSection id="savedSection">
         <H1>Saved</H1>
@@ -234,6 +249,8 @@ function Searched() {
           })}
         </SavedCardsDisplay>
       </SavedSection>
+
+      {/* Saved Section end */}
     </PrimaryDiv>
   );
 }
@@ -429,5 +446,6 @@ const H2 = styled.h2`
   align-items: center;
   border-radius: 0.5rem;
   border: solid 2px #18eb23;
+  z-index: 1000;
 `;
 export default Searched;

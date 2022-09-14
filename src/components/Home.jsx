@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Pages from "../pages/Pages";
+// import Pages from "../pages/Pages";
 import { NavLink } from "react-router-dom";
 import { BsBuilding } from "react-icons/bs";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { HashLink as Link } from "react-router-hash-link";
+import Searched from "./Searched";
 
 function Home() {
   return (
@@ -19,7 +20,7 @@ function Home() {
         <NavigationSection>
           <Ul>
             <Li>
-              <Link1 to="#searchedSection" id="Rent">
+              <Link1 to="/rent" id="Rent">
                 Rent
               </Link1>
             </Li>
@@ -39,7 +40,7 @@ function Home() {
           <HiOutlineUserCircle size="2rem" />
         </UserSection>
       </Header>
-      <Pages />
+      <Searched />
     </PrimaryDiv>
   );
 }
