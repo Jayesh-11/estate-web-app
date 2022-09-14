@@ -60,22 +60,23 @@ const Header = styled.div`
 `;
 const Logo = styled.div`
   background-color: transparent;
-  width: 20vw;
+  width: 15vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5px;
 `;
 
 const NavigationSection = styled.div`
-  width: 60vw;
+  width: 75vw;
   height: 100%;
 `;
 
 const UserSection = styled.div`
   background-color: transparent;
-  width: 20vw;
+  width: 10vw;
   height: 100%;
   display: flex;
   justify-content: center;

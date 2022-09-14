@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { sample_data } from "../constants/MOCK_DATA";
 import { BiBath, BiBed } from "react-icons/bi";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineHome, AiFillStar } from "react-icons/ai";
 import { BsBookmark, BsFillBookmarkFill } from "react-icons/bs";
+import { GrLocation } from "react-icons/gr";
 
 function Searched() {
   const [data, setData] = useState(sample_data);
@@ -14,7 +15,7 @@ function Searched() {
   const [displayTypeList, setDisplayTypeList] = useState(false);
   const listData = [...new Set(sample_data.map((item) => item.house_type))];
   const [savedCards, setSavedCards] = useState([]);
-  // const [currentSaved, setCurrentSaved] = useState();
+  const [popUp, setPopUp] = useState(false);
 
   const priceHandler = () => {
     if (price === "" || price === "High to low") {
@@ -92,14 +93,27 @@ function Searched() {
     } else {
       setSavedCards([...savedCards, x]);
     }
+    setPopUp(true);
+    popUpHandler();
+  };
+
+  const popUpHandler = () => {
+    setTimeout(() => {
+      setPopUp(false);
+    }, 1500);
   };
 
   return (
     <PrimaryDiv>
+      {popUp ? (
+        <PopUpDiv>
+          <H2>Done</H2>
+        </PopUpDiv>
+      ) : null}
       <FilterSection id="searchedSection">
         <FilterButton onClick={priceHandler}>{price}</FilterButton>
         <Div1>
-          <FilterButton onClick={displayList}>{type}⬇️</FilterButton>
+          <FilterButton onClick={displayList}>{type}</FilterButton>
           {displayTypeList ? (
             <TypeListDiv>
               {listData.map((item) => {
@@ -117,6 +131,9 @@ function Searched() {
             </TypeListDiv>
           ) : null}
         </Div1>
+
+        <FilterButton onClick={areaHandler}>{area}</FilterButton>
+        <FilterButton onClick={resetHandler}>Reset</FilterButton>
         <LocationInput
           type="text"
           placeholder="Eg- New York"
@@ -126,9 +143,6 @@ function Searched() {
             locationHandler(); // isInSet = true;
           }}
         ></LocationInput>
-        {/*search*/}
-        <FilterButton onClick={areaHandler}>{area}</FilterButton>
-        <FilterButton onClick={resetHandler}>Reset</FilterButton>
       </FilterSection>
       <SearchResults>
         {data.map((item) => {
@@ -149,8 +163,11 @@ function Searched() {
               <CardData>
                 <Span3>{item.house_name}</Span3>
               </CardData>
-              <CardData>{item.score} / 5</CardData>
-              <CardData>{item.location}</CardData>
+              <CardData>
+                <AiFillStar /> {item.score}/5 {"  "}
+                <GrLocation />
+                {item.location}
+              </CardData>
               <CardData>
                 <Span4>
                   <BiBed /> {item.bedroom} Bedroom
@@ -192,8 +209,11 @@ function Searched() {
                 <CardData>
                   <Span3>{item.house_name}</Span3>
                 </CardData>
-                <CardData>{item.score} / 5</CardData>
-                <CardData>{item.location}</CardData>
+                <CardData>
+                  <AiFillStar /> {item.score}/5 {"  "}
+                  <GrLocation />
+                  {item.location}
+                </CardData>
                 <CardData>
                   <Span4>
                     <BiBed /> {item.bedroom} Bedroom
@@ -201,6 +221,12 @@ function Searched() {
                   <Span4>
                     <BiBath />
                     {item.bathroom} Baths
+                  </Span4>
+                </CardData>
+                <CardData>
+                  <Span4>
+                    <AiOutlineHome />
+                    {item.area} Sq-feet
                   </Span4>
                 </CardData>
               </Card>
@@ -229,7 +255,7 @@ const FilterSection = styled.div`
   gap: 2vw;
 `;
 const SearchResults = styled.div`
-  width: 100%;
+  width: 100vw;
   background-color: transparent;
   display: flex;
   flex-direction: row;
@@ -268,9 +294,9 @@ const CardData = styled.div`
   height: 5vh;
   width: 35vh;
   background-color: white;
-  margin-top: 1rem;
   border-radius: 1rem;
   margin-left: 1rem;
+  margin-top: 0.5rem;
 `;
 
 const Div1 = styled.div`
@@ -378,5 +404,30 @@ const SavedCardsDisplay = styled.div`
   column-gap: 5vh;
   row-gap: 2vw;
   padding-top: 2rem;
+`;
+
+const PopUpDiv = styled.div`
+  background-color: transparent;
+  text-align: center;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+`;
+
+const H2 = styled.h2`
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
+  height: 100%;
+  width: 20vw;
+  background-color: #f3f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: solid 2px #18eb23;
 `;
 export default Searched;
